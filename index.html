@@ -629,6 +629,14 @@
   .rm2-text{font-size:13px;color:var(--ink-text);line-height:1.35}
   .rm2-text b{font-weight:600}
 
+
+  /* operational rhythm stats */
+  .oprhythm{display:flex;flex-direction:column;gap:8px}
+  .opr-stat{display:grid;grid-template-columns:52px 1fr;gap:10px;align-items:center;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 14px}
+  .opr-n{font-family:"IBM Plex Mono",monospace;font-size:22px;font-weight:700;color:var(--navy);line-height:1}
+  .opr-n .opr-unit{font-size:11px;font-weight:500;color:var(--slate);display:block;margin-top:2px}
+  .opr-desc{font-size:12px;color:var(--ink-text);line-height:1.35}
+  .opr-desc .opr-sub{font-size:10.5px;color:var(--slate);margin-top:2px}
 </style>
 </head>
 <body>
@@ -755,7 +763,7 @@
         <div class="init-h"><div class="ico">Q</div>
           <div><div class="ht">Новые продукты</div><div class="hs">Многофакторный анализ</div></div></div>
         <ul>
-          <li><b>БКС Рейтинг</b> — 4-факторная систематическая оценка бумаг</li>
+          <li>Создание <b>числовых моделей</b> для генерации сигналов на покупку и продажу базовых активов и корзин</li>
           <li>Поток многофакторного анализа: ~80% бумаг через рейтинг, аналитик верифицирует</li>
           <li>Бэктест исторической доходности рейтинга</li>
           <li>Многофакторный анализ дополняет фундаментальный, не заменяет</li>
@@ -817,14 +825,35 @@
         <div class="cl-groups"><div class="cl-group"><div class="cgn">Этажи</div><div><div class="cl-track"><div class="cl-fill" style="width:100%"></div></div><div style="font-size:11px;color:var(--slate);margin-top:3px">Премьер 28.6% · Ультима 6.7% · Сегменты 2.1%</div></div><div class="cgs">37.4%</div></div><div class="cl-group"><div class="cgn">Брокер</div><div><div class="cl-track"><div class="cl-fill" style="width:78%"></div></div><div style="font-size:11px;color:var(--slate);margin-top:3px">КБО 19.2% · ИТ 6.3% · Форекс/CFD 3.7%</div></div><div class="cgs">29.2%</div></div><div class="cl-group"><div class="cgn">Капитал</div><div><div class="cl-track"><div class="cl-fill" style="width:60%"></div></div><div style="font-size:11px;color:var(--slate);margin-top:3px">СП 16.0% · УК 2.6% · СК 2.2% · ОА 1.3%</div></div><div class="cgs">22.6%</div></div><div class="cl-group"><div class="cgn">Дубай</div><div><div class="cl-track"><div class="cl-fill" style="width:11%"></div></div><div style="font-size:11px;color:var(--slate);margin-top:3px">Брокер КБО · Сети · Трейдинг</div></div><div class="cgs">4.3%</div></div><div class="cl-group"><div class="cgn">КИБ</div><div><div class="cl-track"><div class="cl-fill" style="width:11%"></div></div><div style="font-size:11px;color:var(--slate);margin-top:3px">DCM 4.2%</div></div><div class="cgs">4.2%</div></div><div class="cl-group"><div class="cgn">ИББ</div><div><div class="cl-track"><div class="cl-fill" style="width:6%"></div></div><div style="font-size:11px;color:var(--slate);margin-top:3px">ДОПИ 2.3%</div></div><div class="cgs">2.3%</div></div></div>
       </div>
       <div class="cl-right">
-        <div class="cl-rhythm">
-          <div class="crh">Каналы и ритм доставки</div>
-          <div class="cri"><span class="crn">HTML-рассылки</span><span class="crf">ежедневно</span></div>
-          <div class="cri"><span class="crn">Проактивные сообщения в чатах</span><span class="crf">реальное время</span></div>
-          <div class="cri"><span class="crn">Приложение БКС</span><span class="crf">постоянно</span></div>
-          <div class="cri"><span class="crn">Через финансовых советников</span><span class="crf">по запросу</span></div>
+        <div style="font-family:'IBM Plex Mono',monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--slate);margin-bottom:10px">Операционный ритм · точки контакта</div>
+        <div class="oprhythm">
+          <div class="opr-stat">
+            <div class="opr-n">2<span class="opr-unit">в день</span></div>
+            <div class="opr-desc"><b>Ежедневные звонки</b>
+              <div class="opr-sub">КБО (акции РФ 9:40) · Брокер/БКС Экспресс (9:00)</div></div>
+          </div>
+          <div class="opr-stat">
+            <div class="opr-n">~8<span class="opr-unit">в неделю</span></div>
+            <div class="opr-desc"><b>Регулярных звонков</b>
+              <div class="opr-sub">Вт: КБО, Дубай · Ср: США/Китай ×3 · Пт: РФ ×4 · Пн: Сети+Ультима</div></div>
+          </div>
+          <div class="opr-stat">
+            <div class="opr-n">10+<span class="opr-unit">чатов</span></div>
+            <div class="opr-desc"><b>Активных чатов аналитики</b>
+              <div class="opr-sub">#Equity · #Аналитики БКС · #ФИИ+СП · Global Equity · #Fixed Income · #BCS Capital DIFC и др.</div></div>
+          </div>
+          <div class="opr-stat">
+            <div class="opr-n">1000+<span class="opr-unit">человек</span></div>
+            <div class="opr-desc"><b>Охват крупнейших звонков</b>
+              <div class="opr-sub">Сети #Аналитики БКС — 1000+ приглашённых (вкл. моб. и вирт. офисы)</div></div>
+          </div>
+          <div class="opr-stat">
+            <div class="opr-n">4<span class="opr-unit">канала</span></div>
+            <div class="opr-desc"><b>Каналы доставки контента</b>
+              <div class="opr-sub">HTML-рассылки · чаты · приложение БКС · финсоветники</div></div>
+          </div>
         </div>
-        <div class="newclient" style="margin-top:12px">
+        <div class="newclient" style="margin-top:10px">
           <span class="nctag">Новый заказчик · 2026</span>
           <div class="nct"><b>Продуктовая дирекция</b> — инвестиционные идеи и качество продукта</div>
         </div>
