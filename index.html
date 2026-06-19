@@ -849,6 +849,7 @@ ine-height:1.35;opacity:.9;padding-left:15px;position:relative}
 
 </style>
 <!-- build:1781849589 -->
+<!-- ts:1781849798 -->
 </head>
 <body>
 <div class="progress" id="progress"></div>
@@ -1705,12 +1706,13 @@ ine-height:1.35;opacity:.9;padding-left:15px;position:relative}
 <div class="nav">
   <button id="reload" aria-label="Обновить" title="Обновить и остаться на этом слайде">⟳</button>
   <button id="prev" aria-label="Назад">↑</button>
-  <div class="counter"><span class="cur" id="cur">01</span> / <span id="total">14</span></div>
+  <div class="counter"><span class="cur" id="cur">01</span> / <span id="total">22</span></div>
   <button id="next" aria-label="Вперёд">↓</button>
 </div>
 <script>
   const deck=document.getElementById('deck');
   const slides=[...document.querySelectorAll('.slide')];
+  document.getElementById('total').textContent=String(slides.length).padStart(2,'0');
   const cur=document.getElementById('cur');
   document.getElementById('total').textContent=String(slides.length).padStart(2,'0');
   const progress=document.getElementById('progress');
