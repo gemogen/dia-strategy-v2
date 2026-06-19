@@ -1766,8 +1766,8 @@ ine-height:1.35;opacity:.9;padding-left:15px;position:relative}
   let idx=targetSlide!==null?targetSlide:0;
   let restoring=targetSlide!==null;
   function go(i){
-    if(i>=slides.length) i=0;          // с последнего → на первый
-    if(i<0) i=0;                       // с первого назад — стоп
+    if(i>=slides.length) i=slides.length-1;  // стоп на последнем
+    if(i<0) i=0;                              // стоп на первом
     idx=i; deck.scrollTo({top:slides[idx].offsetTop,behavior:'smooth'});
   }
   document.getElementById('next').onclick=()=>go(idx+1);
