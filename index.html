@@ -1765,7 +1765,11 @@ ine-height:1.35;opacity:.9;padding-left:15px;position:relative}
   const targetSlide=_hm?Math.min(slides.length-1,Math.max(0,parseInt(_hm[1],10)-1)):null;
   let idx=targetSlide!==null?targetSlide:0;
   let restoring=targetSlide!==null;
-  function go(i){idx=Math.max(0,Math.min(slides.length-1,i));deck.scrollTo({top:slides[idx].offsetTop,behavior:'smooth'})}
+  function go(i){
+    if(i>=slides.length) i=0;          // с последнего → на первый
+    if(i<0) i=0;                       // с первого назад — стоп
+    idx=i; deck.scrollTo({top:slides[idx].offsetTop,behavior:'smooth'});
+  }
   document.getElementById('next').onclick=()=>go(idx+1);
   document.getElementById('prev').onclick=()=>go(idx-1);
   document.getElementById('reload').onclick=function(){
